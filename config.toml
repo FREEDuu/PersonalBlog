@@ -70,7 +70,7 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "PersonalBlog"
 
     [languages.en.params]
       subtitle = "A simple, retro theme for Hugo"
@@ -88,8 +88,8 @@ paginate = 5
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Terminal"
-        logoHomeLink = "/"
+        logoText = "PersonalBlog"
+        logoHomeLink = "/PersonalBlog"
 
       [languages.en.menu]
         [[languages.en.menu.main]]

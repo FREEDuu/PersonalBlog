@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Terminal</title>
+    <title>Tags on PersonalBlog</title>
     <link>https://freeduu.github.io/PersonalBlog/tags/</link>
-    <description>Recent content in Tags on Terminal</description>
+    <description>Recent content in Tags on PersonalBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://freeduu.github.io/PersonalBlog/tags/index.xml" rel="self" type="application/rss+xml" />
