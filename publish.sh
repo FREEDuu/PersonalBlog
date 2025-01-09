@@ -4,7 +4,7 @@ rsync -av --delete "/home/francesco/Documents/Obsidian Vault/static" "/home/fran
 
 echo "copy images"
 
-rsync -av --delete "/home/francesco/Documents/Obsidian Vault/posts" "/home/francesco/Desktop/PersonalBlog/static"
+rsync -av --delete "/home/francesco/Documents/Obsidian Vault/posts" "/home/francesco/Desktop/PersonalBlog/content"
 
 echo "copy posts"
 
@@ -15,7 +15,7 @@ ssh -T git@github.com
 echo "push changes into PersonalBlog.git repo"
 
 git add .
-git commit -m "Create hugo.yaml"
+git commit -m "new blog post :D"
 git push
 
 echo "everything fine and up to date"
