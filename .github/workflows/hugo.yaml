@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - master
+      - source
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -67,6 +67,11 @@ jobs:
 
   # Deployment job
   deploy:
+    uses: peaceiris/actions-gh-pages@v3
+      with:
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
+          publish_dir: ./public
+          publish_branch: master  # deploying branch  
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
