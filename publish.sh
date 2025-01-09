@@ -10,6 +10,8 @@ echo "copy posts"
 
 echo "Connecting to GH via ssh"
 
+hugo
+
 ssh -T git@github.com
 
 echo "push changes into PersonalBlog.git repo"
