@@ -36,7 +36,6 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
-          touch .nojekyll
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Install Dart Sass
@@ -57,7 +56,6 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
-          touch .nojekyll
           hugo \
             --gc \
             --minify \
@@ -69,11 +67,6 @@ jobs:
 
   # Deployment job
   deploy:
-    uses: peaceiris/actions-gh-pages@v3
-      with:
-          deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
-          publish_dir: ./public
-          publish_branch: master  # deploying branch  
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
